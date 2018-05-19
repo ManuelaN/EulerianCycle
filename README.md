@@ -1,1 +1,1 @@
-# EulerianCycle
+# Eulerian Cycle
