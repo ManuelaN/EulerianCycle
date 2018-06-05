@@ -114,13 +114,27 @@ int main()
             break;
 
         case 4:
-            start=1;
-            Fleury(graph,start);
-
+            if(found==0)
+                printf("Nu exista ciclu Eulerian.\n");
+            else
+            {
+              printf("Ciclurile Euleriene sunt:\n");
+              for(start=1; start<=graph->no_nodes; start++){
+                  Fleury(graph,start);
+                  printf("\n");
+                  }
+            }
             break;
         case 5:
-            start=1;
-            Hierholzer(graph,start);
+            if(found!=0)
+            {
+              printf("Ciclurile Euleriene sunt:\n");
+              for(start=1; start<=graph->no_nodes; start++){
+                   Hierholzer(graph,start);
+                   printf("\n");
+              }
+            }else
+                printf("Nu exista ciclu Eulerian.\n");
             break;
         case 6:
             exit(0);
